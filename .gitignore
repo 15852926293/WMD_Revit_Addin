@@ -1,0 +1,8 @@
+
+*.cache
+*.cache
+WMD_Revit_Addin/obj/x64/Debug/WMD_Revit_Addin_MarkupCompile.lref
+WMD_Revit_Addin/obj/x64/Debug/WMD_Revit_Addin.csproj.FileListAbsolute.txt
+*.dll
+*.pdb
+*.lref
