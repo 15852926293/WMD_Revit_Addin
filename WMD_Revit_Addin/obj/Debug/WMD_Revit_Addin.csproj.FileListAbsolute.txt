@@ -1,0 +1,10 @@
+E:\Work\工具\WMD_Revit_Addin\WMD_Revit_Addin\bin\Debug\WMD_Revit_Addin.dll
+E:\Work\工具\WMD_Revit_Addin\WMD_Revit_Addin\bin\Debug\WMD_Revit_Addin.pdb
+E:\Work\工具\WMD_Revit_Addin\WMD_Revit_Addin\bin\Debug\RevitAPI.dll
+E:\Work\工具\WMD_Revit_Addin\WMD_Revit_Addin\bin\Debug\RevitAPIUI.dll
+E:\Work\工具\WMD_Revit_Addin\WMD_Revit_Addin\bin\Debug\RevitUIAPI.dll
+E:\Work\工具\WMD_Revit_Addin\WMD_Revit_Addin\obj\Debug\WMD_Revit_Addin.csproj.CoreCompileInputs.cache
+E:\Work\工具\WMD_Revit_Addin\WMD_Revit_Addin\obj\Debug\WMD_Revit_Addin.csproj.CopyComplete
+E:\Work\工具\WMD_Revit_Addin\WMD_Revit_Addin\obj\Debug\WMD_Revit_Addin.dll
+E:\Work\工具\WMD_Revit_Addin\WMD_Revit_Addin\obj\Debug\WMD_Revit_Addin.pdb
+E:\Work\工具\WMD_Revit_Addin\WMD_Revit_Addin\obj\Debug\WMD_Revit_Addin.g.resources

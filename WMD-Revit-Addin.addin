@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+	<AddIn Type="Application">
+		<Name>UIPanel</Name>
+		<Assembly>C:\Users\zjd\Desktop\WMD_Revit_Addin\WMD_Revit_Addin\bin\x64\Debug\WMD_Revit_Addin.dll</Assembly>
+		<ClientId>c222d192-1dcf-4db6-8ff4-3ec6af38b53a</ClientId>
+		<FullClassName>WMD_Revit_Addin.UIPanel</FullClassName>
+		<VendorId>ADSK</VendorId>
+		<VendorDescription>Autodesk, www.autodesk.com</VendorDescription>
+	</AddIn>
+</RevitAddIns>
