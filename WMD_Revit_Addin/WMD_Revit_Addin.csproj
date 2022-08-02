@@ -77,7 +77,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppConstants.cs" />
-    <Compile Include="Class1.cs" />
     <Compile Include="cmd\BendMEPCurveCmd.cs" />
     <Compile Include="cmd\BreakMEPCurveCmd.cs" />
     <Compile Include="cmd\QuickGridDimensionCmd.cs" />
