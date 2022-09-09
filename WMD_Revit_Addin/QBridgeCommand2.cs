@@ -10,14 +10,14 @@ using System.Threading.Tasks;
 namespace WMD_Revit_Addin
 {
     [Transaction(TransactionMode.Manual)]
-    public class Demo2 : IExternalCommand
+    public class QBridgeCommand2 : IExternalCommand
     {
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
         {
             Document doc = commandData.Application.ActiveUIDocument.Document;
 
-            ShowRevitView srv = new ShowRevitView(doc);
-            srv.ShowDialog();
+            BuildBridgeFrm2 buildBridgeFrm2 = new BuildBridgeFrm2(commandData);
+            buildBridgeFrm2.ShowDialog();
 
             return Result.Succeeded;
         }

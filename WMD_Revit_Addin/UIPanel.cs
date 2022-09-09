@@ -25,7 +25,7 @@ namespace WMD_Revit_Addin
             string thisAssemblyPath = Assembly.GetExecutingAssembly().Location;//获取当前dll(程序集)的路径
 
             application.CreateRibbonTab("WMD管理工具");
-            RibbonPanel ribbonPanel = application.CreateRibbonPanel("WMD管理工具", "TEST");
+            RibbonPanel ribbonPanel = application.CreateRibbonPanel("WMD管理工具", "WMD-Addin");
             //RibbonPanel ribbonPanel2 = application.CreateRibbonPanel("WMD管理工具", "PANEL2");
 
             //注意：图标一定要调整属性为 Resource。
@@ -34,24 +34,36 @@ namespace WMD_Revit_Addin
             ribbonPanel.AddSeparator();
 
             #region 1
-            PushButtonData pushButtonData = new PushButtonData("INFAMATION1", "Demo1",
-                                          thisAssemblyPath, "WMD_Revit_Addin.Demo1");
+            PushButtonData pushButtonData = new PushButtonData("INFAMATION1", "Demo",
+                                          thisAssemblyPath, "WMD_Revit_Addin.Demo");
             PushButton pushButton = ribbonPanel.AddItem(pushButtonData) as PushButton;
-            string pngName = "1";
+            string pngName = "Demo";
             SetIconByName(pngName, pushButton);
-            pushButton.ToolTip = "Tip：区域1按钮1";
+            pushButton.ToolTip = "小工具合集";
             #endregion
 
             //添加分隔符
-            //ribbonPanel.AddSeparator();
+            ribbonPanel.AddSeparator();
 
             #region 2
-            PushButtonData pushButtonData2 = new PushButtonData("INFAMATION2", "Demo2",
-                                          thisAssemblyPath, "WMD_Revit_Addin.Demo2");
+            PushButtonData pushButtonData2 = new PushButtonData("INFAMATION2", "QBridge",
+                                          thisAssemblyPath, "WMD_Revit_Addin.QBridgeCommand");
             PushButton pushButton2 = ribbonPanel.AddItem(pushButtonData2) as PushButton;
-            string pngName02 = "2";
+            string pngName02 = "QBridge";
             SetIconByName(pngName02, pushButton2);
-            pushButton2.ToolTip = "Tip：区域1按钮2";
+            pushButton2.ToolTip = "大跨度连续梁桥生成工具";
+            //string pngName052 = "族几个定义的介绍";
+            //SetToolTipImageByName(pngName052, pushButton2);
+
+            //添加分隔符
+            ribbonPanel.AddSeparator();
+
+            PushButtonData pushButtonData3 = new PushButtonData("INFAMATION3", "QBridge2",
+                                          thisAssemblyPath, "WMD_Revit_Addin.QBridgeCommand2");
+            PushButton pushButton3 = ribbonPanel.AddItem(pushButtonData3) as PushButton;
+            string pngName03 = "QBridge";
+            SetIconByName(pngName03, pushButton3);
+            pushButton3.ToolTip = "大跨度连续梁桥生成工具(带平纵曲线)";
             //string pngName052 = "族几个定义的介绍";
             //SetToolTipImageByName(pngName052, pushButton2);
 

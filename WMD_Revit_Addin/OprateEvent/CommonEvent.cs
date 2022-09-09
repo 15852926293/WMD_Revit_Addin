@@ -50,6 +50,13 @@ namespace WMD_Revit_Addin.OprateEvent
             return ExternalEvent;
         }
 
+        //连续梁桥生成事件
+        public ExternalEvent RegBuildBridgeQuickEvent(CommonEvent buildBridge)
+        {
+            ExternalEvent = ExternalEvent.Create(buildBridge);
+            return ExternalEvent;
+        }
+
 
 
         //执行外部事件

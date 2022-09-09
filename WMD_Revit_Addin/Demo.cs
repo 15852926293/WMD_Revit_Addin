@@ -11,7 +11,7 @@ using WMD_Revit_Addin.OprateEvent;
 namespace WMD_Revit_Addin
 {
     [Transaction(TransactionMode.Manual)]
-    class Demo1 : IExternalCommand
+    class Demo : IExternalCommand
     {
         public Result Execute(ExternalCommandData commandData, ref string message, Autodesk.Revit.DB.ElementSet elements)
         {

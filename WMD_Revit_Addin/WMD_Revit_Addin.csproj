@@ -77,16 +77,45 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppConstants.cs" />
+    <Compile Include="BuildBridge2Setting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuildBridge2Setting.Designer.cs">
+      <DependentUpon>BuildBridge2Setting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="QBridgeCommand2.cs" />
+    <Compile Include="BuildBridgeFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuildBridgeFrm.Designer.cs">
+      <DependentUpon>BuildBridgeFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuildBridgeFrm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuildBridgeFrm2.Designer.cs">
+      <DependentUpon>BuildBridgeFrm2.cs</DependentUpon>
+    </Compile>
     <Compile Include="cmd\BendMEPCurveCmd.cs" />
     <Compile Include="cmd\BreakMEPCurveCmd.cs" />
+    <Compile Include="cmd\BuildBridgeCmd.cs" />
+    <Compile Include="cmd\BuildBridgeCmd2.cs" />
     <Compile Include="cmd\QuickGridDimensionCmd.cs" />
+    <Compile Include="CommonClass\FailurePreprocessor.cs" />
+    <Compile Include="CommonClass\ProjectFamLoadOption.cs" />
+    <Compile Include="CommonClass\UnitConvers.cs" />
     <Compile Include="CurveSetFrm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CurveSetFrm.Designer.cs">
       <DependentUpon>CurveSetFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Demo2.cs" />
+    <Compile Include="QBridgeCommand.cs" />
     <Compile Include="Filter\GridFilter.cs" />
     <Compile Include="Filter\MEPCurveFilter.cs" />
     <Compile Include="Form1.cs">
@@ -103,20 +132,28 @@
     <Compile Include="ShowRevitView.xaml.cs">
       <DependentUpon>ShowRevitView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Demo1.cs" />
+    <Compile Include="Demo.cs" />
     <Compile Include="UIPanel.cs" />
-    <Compile Include="UnitConvers.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="pic\1.png" />
-    <Resource Include="pic\2.png" />
-  </ItemGroup>
-  <ItemGroup>
+    <EmbeddedResource Include="BuildBridge2Setting.resx">
+      <DependentUpon>BuildBridge2Setting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuildBridgeFrm.resx">
+      <DependentUpon>BuildBridgeFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuildBridgeFrm2.resx">
+      <DependentUpon>BuildBridgeFrm2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CurveSetFrm.resx">
       <DependentUpon>CurveSetFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -124,6 +161,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pic\QBridge.png" />
+    <Resource Include="pic\Demo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
