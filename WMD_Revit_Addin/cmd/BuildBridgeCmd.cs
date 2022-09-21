@@ -136,14 +136,14 @@ namespace WMD_Revit_Addin.cmd
                 Transaction transaction1 = new Transaction(revitDoc);
                 transaction1.Start("改变族参数");
 
-                param1.Set(UnitConvers.Tofoot(List_XLG[i]));            //变截面箱梁i截面的高度
-                param2.Set(UnitConvers.Tofoot(List_DBH[i]));           //变截面箱梁i截面底板的高度
-                param3.Set(UnitConvers.Tofoot(List_FBH[i]));           //变截面箱梁i截面腹板的宽度
-                param4.Set(UnitConvers.Tofoot(List_TBH[i]));           //变截面箱梁i截面顶板的高度
-                param5.Set(UnitConvers.Tofoot(List_XLG[j]));            //变截面箱梁j截面的高度
-                param6.Set(UnitConvers.Tofoot(List_DBH[j]));           //变截面箱梁j截面底板的高度
-                param7.Set(UnitConvers.Tofoot(List_FBH[j]));            //变截面箱梁j截面腹板的宽度
-                param8.Set(UnitConvers.Tofoot(List_TBH[j]));           //变截面箱梁j截面顶板的高度
+                param1.Set(UnitConvers.Tofoot(List_XLG[i]));            //变截面箱梁a截面的高度
+                param2.Set(UnitConvers.Tofoot(List_DBH[i]));           //变截面箱梁a截面底板的高度
+                param3.Set(UnitConvers.Tofoot(List_FBH[i]));           //变截面箱梁a截面腹板的宽度
+                param4.Set(UnitConvers.Tofoot(List_TBH[i]));           //变截面箱梁a截面顶板的高度
+                param5.Set(UnitConvers.Tofoot(List_XLG[j]));            //变截面箱梁b截面的高度
+                param6.Set(UnitConvers.Tofoot(List_DBH[j]));           //变截面箱梁b截面底板的高度
+                param7.Set(UnitConvers.Tofoot(List_FBH[j]));            //变截面箱梁b截面腹板的宽度
+                param8.Set(UnitConvers.Tofoot(List_TBH[j]));           //变截面箱梁b截面顶板的高度
                 param9.Set(UnitConvers.Tofoot(List_JDCD[j]));         //变截面箱梁节段长度
                 //param10.Set(List_SJGC[i] / 304.8 - List_SJGC[j] / 304.8);     //变截面箱梁两个z截面的高差
                 //param11.Set(List_Y[i] / 304.8 - List_Y[j] / 304.8);     //变截面箱梁两个Y截面的高差

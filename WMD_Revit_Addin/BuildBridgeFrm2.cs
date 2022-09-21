@@ -113,6 +113,8 @@ namespace WMD_Revit_Addin
             OpenFileDialog outsideFile = new OpenFileDialog();
             outsideFile.ShowDialog();
             this.txt_outside.Text = outsideFile.SafeFileName;
+            if (string.IsNullOrEmpty(outsideFile.SafeFileName))
+                return;
             buildBridgeCmd2.filePath1 = System.IO.Path.GetFullPath(outsideFile.FileName);
         }
 
@@ -120,6 +122,8 @@ namespace WMD_Revit_Addin
         {
             OpenFileDialog insideFile = new OpenFileDialog();
             insideFile.ShowDialog();
+            if (string.IsNullOrEmpty(insideFile.SafeFileName))
+                return;
             this.txt_inside.Text = insideFile.SafeFileName;
             buildBridgeCmd2.filePath2 = System.IO.Path.GetFullPath(insideFile.FileName);
         }

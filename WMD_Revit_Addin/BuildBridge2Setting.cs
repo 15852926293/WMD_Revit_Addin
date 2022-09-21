@@ -23,10 +23,12 @@ namespace WMD_Revit_Addin
 
         private void button1_Click(object sender, EventArgs e)
         {
-            OpenFileDialog outsideFile = new OpenFileDialog();
-            outsideFile.ShowDialog();
-            this.textBox1.Text = outsideFile.SafeFileName;
-            BBC2.NewFamilyDocumenPath = System.IO.Path.GetFullPath(outsideFile.FileName);
+            OpenFileDialog file = new OpenFileDialog();
+            file.ShowDialog();
+            if (string.IsNullOrEmpty(file.SafeFileName))
+                return;
+            this.textBox1.Text = file.SafeFileName;
+            BBC2.NewFamilyDocumenPath = System.IO.Path.GetFullPath(file.FileName);
         }
     }
 }

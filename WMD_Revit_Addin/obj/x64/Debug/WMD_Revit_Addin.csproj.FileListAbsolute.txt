@@ -49,3 +49,4 @@ E:\Work\BIM\Code\WMD_Revit_Addin\WMD_Revit_Addin\obj\x64\Debug\WMD_Revit_Addin.B
 E:\Work\BIM\Code\WMD_Revit_Addin\WMD_Revit_Addin\obj\x64\Debug\WMD_Revit_Addin.BuildBridgeFrm2.resources
 E:\Work\BIM\Code\WMD_Revit_Addin\WMD_Revit_Addin\obj\x64\Debug\WMD_Revit_Addin.BuildBridge2Setting.resources
 E:\Work\BIM\Code\WMD_Revit_Addin\WMD_Revit_Addin\obj\x64\Debug\WMD_Revit_Addin.Properties.Resources.resources
+E:\Work\BIM\Code\WMD_Revit_Addin\WMD_Revit_Addin\obj\x64\Debug\WMD_Revit_Addin.csprojAssemblyReference.cache

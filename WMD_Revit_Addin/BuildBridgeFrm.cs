@@ -105,10 +105,12 @@ namespace WMD_Revit_Addin
 
         private void button2_Click(object sender, EventArgs e)
         {
-            OpenFileDialog outsideFile = new OpenFileDialog();
-            outsideFile.ShowDialog();
-            this.tb_Beam.Text = outsideFile.SafeFileName;
-            buildBridgeQuickCmd.filePath = System.IO.Path.GetFullPath(outsideFile.FileName);
+            OpenFileDialog beamFile = new OpenFileDialog();
+            beamFile.ShowDialog();
+            if (string.IsNullOrEmpty(beamFile.SafeFileName))
+                return;
+            this.tb_Beam.Text = beamFile.SafeFileName;
+            buildBridgeQuickCmd.filePath = System.IO.Path.GetFullPath(beamFile.FileName);
         }
     }
 }
