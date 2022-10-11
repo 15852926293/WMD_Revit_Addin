@@ -52,14 +52,21 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtBendValue = new System.Windows.Forms.TextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.cb_Dimfont = new System.Windows.Forms.ComboBox();
-            this.button6 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
+            this.cb_Dimfont = new System.Windows.Forms.ComboBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.tb_preName = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.button7 = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.tb_dirPath = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_delete
@@ -308,13 +315,14 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "轴网批量标注";
             // 
-            // cb_Dimfont
+            // label10
             // 
-            this.cb_Dimfont.FormattingEnabled = true;
-            this.cb_Dimfont.Location = new System.Drawing.Point(18, 53);
-            this.cb_Dimfont.Name = "cb_Dimfont";
-            this.cb_Dimfont.Size = new System.Drawing.Size(229, 20);
-            this.cb_Dimfont.TabIndex = 4;
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(16, 29);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(53, 12);
+            this.label10.TabIndex = 6;
+            this.label10.Text = "标注类型";
             // 
             // button6
             // 
@@ -326,20 +334,77 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // label10
+            // cb_Dimfont
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(16, 29);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(53, 12);
-            this.label10.TabIndex = 6;
-            this.label10.Text = "标注类型";
+            this.cb_Dimfont.FormattingEnabled = true;
+            this.cb_Dimfont.Location = new System.Drawing.Point(18, 53);
+            this.cb_Dimfont.Name = "cb_Dimfont";
+            this.cb_Dimfont.Size = new System.Drawing.Size(229, 20);
+            this.cb_Dimfont.TabIndex = 4;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.tb_dirPath);
+            this.groupBox6.Controls.Add(this.label12);
+            this.groupBox6.Controls.Add(this.button7);
+            this.groupBox6.Controls.Add(this.label11);
+            this.groupBox6.Controls.Add(this.tb_preName);
+            this.groupBox6.Location = new System.Drawing.Point(12, 524);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(378, 112);
+            this.groupBox6.TabIndex = 8;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "批量重命名";
+            // 
+            // tb_preName
+            // 
+            this.tb_preName.Location = new System.Drawing.Point(53, 73);
+            this.tb_preName.Name = "tb_preName";
+            this.tb_preName.Size = new System.Drawing.Size(169, 21);
+            this.tb_preName.TabIndex = 0;
+            this.tb_preName.Text = "装配式_";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(7, 77);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(41, 12);
+            this.label11.TabIndex = 1;
+            this.label11.Text = "前缀：";
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(274, 73);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(75, 23);
+            this.button7.TabIndex = 2;
+            this.button7.Text = "确定";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(6, 39);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(41, 12);
+            this.label12.TabIndex = 3;
+            this.label12.Text = "目录：";
+            // 
+            // tb_dirPath
+            // 
+            this.tb_dirPath.Location = new System.Drawing.Point(53, 36);
+            this.tb_dirPath.Name = "tb_dirPath";
+            this.tb_dirPath.Size = new System.Drawing.Size(259, 21);
+            this.tb_dirPath.TabIndex = 4;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(402, 527);
+            this.ClientSize = new System.Drawing.Size(402, 639);
+            this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -357,6 +422,8 @@
             this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -389,5 +456,11 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.ComboBox cb_Dimfont;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox tb_preName;
+        private System.Windows.Forms.TextBox tb_dirPath;
+        private System.Windows.Forms.Label label12;
     }
 }

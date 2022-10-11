@@ -57,6 +57,13 @@ namespace WMD_Revit_Addin.OprateEvent
             return ExternalEvent;
         }
 
+        //重命名FamilySymbol事件
+        public ExternalEvent RegRenameFamilySymbolEvent(CommonEvent renameFamilySymbol)
+        {
+            ExternalEvent = ExternalEvent.Create(renameFamilySymbol);
+            return ExternalEvent;
+        }
+
 
 
         //执行外部事件

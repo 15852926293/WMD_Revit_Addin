@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,6 +35,9 @@ namespace WMD_Revit_Addin
         CommonEvent quickGridDimEvent = null;
         QuickGridDimensionCmd quickGridDimCmd = null;
 
+        CommonEvent renameFamilySymbolEvent = null;
+        RenameFamilySymbolCmd renameFamilySymbolCmd = null;
+
         string[] combstr = AppConstants.AllBuiltInCategory.Keys.ToArray<string>();
 
         public Form1(ExternalCommandData commandData)
@@ -53,6 +57,10 @@ namespace WMD_Revit_Addin
             this.quickGridDimEvent = new CommonEvent(commandData);
             this.quickGridDimCmd = new QuickGridDimensionCmd(commandData);
             quickGridDimEvent.RegQuickGridDimensionExternalEvent(quickGridDimEvent);
+
+            this.renameFamilySymbolEvent = new CommonEvent(commandData);
+            this.renameFamilySymbolCmd = new RenameFamilySymbolCmd(commandData);
+            renameFamilySymbolEvent.RegRenameFamilySymbolEvent(renameFamilySymbolEvent);
 
             this.TopMost = true;
             InitializeComponent();
@@ -277,6 +285,54 @@ namespace WMD_Revit_Addin
             quickGridDimEvent.ClearExternal();
             quickGridDimEvent.CommonEventExternal += quickGridDimCmd.QuickGridDimension;
             quickGridDimEvent.ExecEvent();
+        }
+
+
+
+        List<string> FilePathList = new List<string>();
+        private void button7_Click(object sender, EventArgs e)
+        {
+            FilePathList.Clear();
+            ParseDirAll(new DirectoryInfo(tb_dirPath.Text));
+
+            
+            renameFamilySymbolCmd.FamilyPathList = FilePathList;
+            renameFamilySymbolCmd.PreName = tb_preName.Text;
+            renameFamilySymbolEvent.ClearExternal();
+            renameFamilySymbolEvent.CommonEventExternal += renameFamilySymbolCmd.RenameFamilySymbol;
+            renameFamilySymbolEvent.ExecEvent();
+        }
+
+        public void ParseDirAll(DirectoryInfo Dir)
+        {
+            var subFiles = Dir.GetFiles(); //获取文件列表
+            var subDirs = Dir.GetDirectories();
+
+            //遍历文件列表
+            RenameFile(subFiles, Dir);
+
+            if (subDirs.Length > 0)
+            {
+                foreach (var subDir in subDirs)
+                {
+                    ParseDirAll(subDir);
+                }
+            }
+        }
+
+        public void RenameFile(FileInfo[] files, DirectoryInfo dir)
+        {
+            foreach (var file in files)
+            {
+                if (file.Extension == ".rfa")
+                {
+                    var str = tb_preName.Text + file.Name;
+                    //var hz = file.Extension;//获取文件的扩展名(后缀名)
+                    file.MoveTo(dir.FullName + "\\" + str);//重命名后的文件保存在原来的目录下
+
+                    FilePathList.Add(dir.FullName + "\\" + str);
+                }
+            }
         }
     }
 }

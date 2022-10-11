@@ -83,6 +83,7 @@
     <Compile Include="BuildBridge2Setting.Designer.cs">
       <DependentUpon>BuildBridge2Setting.cs</DependentUpon>
     </Compile>
+    <Compile Include="cmd\RenameFamilySymbolCmd.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
